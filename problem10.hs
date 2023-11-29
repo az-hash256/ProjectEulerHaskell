@@ -2,12 +2,12 @@
 import Data.List
 
 -- Check if Prime
-isPrime :: Integral t => [t] -> t -> Bool
-isPrime (p:ps) x = p*p > x || x `rem` p /= 0 && isPrime ps x
+isPrime :: Int -> Bool
+isPrime n = all (\p -> n `mod` p /= 0) (takeWhile (\p -> p*p <= n) primes)
 
 -- List of Primes
 primes :: [Int]
-primes = 2 : filter (isPrime primes) [3,5 ..]
+primes = 2 : filter isPrime [3,5..]
 
 -- Solution
 sumNPrimes :: Int -> Int
