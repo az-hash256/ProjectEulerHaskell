@@ -19,7 +19,7 @@ lstProd :: (Ord a, Num a) => [a] -> a -> a
 lstProd [] acc = acc
 lstProd lst acc = let prod = (product $ take 4 lst) in if prod > acc then lstProd (tail lst) prod else lstProd (tail lst) acc
 
--- Extract Diagonals (Remember to come back later and factor out code)
+-- Extract Diagonals
 diagonal :: [Int] -> [[Int]] -> [Int]
 diagonal d lst = zipWith (!!) lst d
 
