@@ -1,7 +1,6 @@
 --- Problem 11: Largest Product in a Grid
 
 import Data.List
-import Data.Array
 
 -- String represention of Grid -> List of Lists
 
